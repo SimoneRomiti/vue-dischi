@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #121212;
+}
+
+header{
+  height: 10vh;
+  background: black;
+}
+header img{
+  height: 10vh;
+}
+
+main{
+  padding: 40px 80px;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.album{
+  margin: 10px;
+  height: 45vh;
+  width: calc(100% / 6 - 20px);
+  background: grey;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.album img{
+  width: 100%;
+}
