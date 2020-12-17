@@ -37,6 +37,7 @@ var app = new Vue(
     methods: {
       sortDiscs: function(arrayObject){
 
+        // SORT PER GLI OGGETTI
         arrayObject.sort(
           function(a, b){
             return a.year - b.year;
@@ -44,6 +45,7 @@ var app = new Vue(
         );
         return arrayObject;
 
+        // ORDINAMENTO MANUALE CON SORT SU NUMERI
         // var arrayYear = [];
         // for(var i = 0; i < arrayObject.length; i++){
         //   console.log(arrayObject[i].year);
