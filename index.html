@@ -25,7 +25,7 @@
 
       <main>
 
-        <div v-for="disc in discs" v-if="myGenre == disc.genre || myGenre == ''" class="album">
+        <div v-for="disc in orderedDiscs" v-if="myGenre == disc.genre || myGenre == ''" class="album">
           <div class="image">
             <img :src="disc.poster" alt="">
           </div>
