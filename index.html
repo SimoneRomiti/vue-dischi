@@ -11,24 +11,24 @@
 
     <div id="container">
       <header>
-        <img src="img/spotify.jpg" alt="">
+        <img src="img/spotify.png" alt="">
       </header>
 
       <main>
-        
-        <div class="album">
+
+        <div v-for="disc in discs" class="album">
           <div class="image">
-            <img src="img/avenged-sevenfold.jfif" alt="">
+            <img :src="disc.poster" alt="">
           </div>
           <div class="title">
-            Walking the Fallen
+            {{disc.title}}
           </div>
           <div>
             <div class="author">
-              Avenged Sevenfold
+              {{disc.author}}
             </div>
             <div class="year">
-              2008
+              {{disc.year}}
             </div>
           </div>
         </div>
@@ -37,6 +37,6 @@
 
     </div>
 
-    <script src="js/script" charset="utf-8"></script>
+    <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
