@@ -41,7 +41,11 @@ var app = new Vue(
         for(var i = 0; i < arrayObject.length; i++){
           console.log(arrayObject[i].year);
           arrayYear.push(arrayObject[i].year);
-          arrayYear.sort();
+          arrayYear.sort(
+            function(a, b){
+              return a - b;
+            }
+          );
         }
 
         var orderedDiscs = [];
