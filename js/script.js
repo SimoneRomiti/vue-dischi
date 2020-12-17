@@ -37,27 +37,34 @@ var app = new Vue(
     methods: {
       sortDiscs: function(arrayObject){
 
-        var arrayYear = [];
-        for(var i = 0; i < arrayObject.length; i++){
-          console.log(arrayObject[i].year);
-          arrayYear.push(arrayObject[i].year);
-          arrayYear.sort(
-            function(a, b){
-              return a - b;
-            }
-          );
-        }
-
-        var orderedDiscs = [];
-        for(var i = 0; i < arrayObject.length; i++){
-          for(var k = 0; k < arrayObject.length; k++)
-          if(arrayYear[i] == arrayObject[k].year){
-            if(orderedDiscs.includes(arrayObject[k]) == false){
-              orderedDiscs.push(arrayObject[k]);
-            }
+        arrayObject.sort(
+          function(a, b){
+            return a.year - b.year;
           }
-        }
-        return orderedDiscs;
+        );
+        return arrayObject;
+
+        // var arrayYear = [];
+        // for(var i = 0; i < arrayObject.length; i++){
+        //   console.log(arrayObject[i].year);
+        //   arrayYear.push(arrayObject[i].year);
+        //   arrayYear.sort(
+        //     function(a, b){
+        //       return a - b;
+        //     }
+        //   );
+        // }
+        //
+        // var orderedDiscs = [];
+        // for(var i = 0; i < arrayObject.length; i++){
+        //   for(var k = 0; k < arrayObject.length; k++)
+        //   if(arrayYear[i] == arrayObject[k].year){
+        //     if(orderedDiscs.includes(arrayObject[k]) == false){
+        //       orderedDiscs.push(arrayObject[k]);
+        //     }
+        //   }
+        // }
+        // return orderedDiscs;
       },
 
     }
