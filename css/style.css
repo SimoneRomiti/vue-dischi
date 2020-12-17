@@ -22,8 +22,21 @@ header img{
   height: 8vh;
 }
 
+.select{
+  margin-top: 15vh;
+  text-align: center;
+}
+
+.select label{
+  color: white;
+}
+
+.select select{
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
 main{
-  margin-top: 12vh;
   padding: 40px 80px;
   color: white;
   display: flex;
@@ -33,7 +46,7 @@ main{
 
 .album{
   margin: 10px;
-  height: 45vh;
+  height: 50vh;
   width: calc(100% / 6 - 20px);
   background: #2A2A2A;
   padding: 20px;
@@ -51,5 +64,9 @@ main{
 
 .title{
   font-size: 20px;
+  font-weight: 700;
+}
+
+.author{
   font-weight: 700;
 }

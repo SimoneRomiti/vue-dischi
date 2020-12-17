@@ -14,14 +14,26 @@
         <img src="img/spotify.png" alt="">
       </header>
 
+      <div class="select">
+        <label for="select">SELEZIONA GENERE</label>
+        <select class="" name="" v-model="myGenre">
+          <option value="">ALL</option>
+          <option v-for="genre in genres">{{genre}}</option>
+        </select>
+      </div>
+
+
       <main>
 
-        <div v-for="disc in discs" class="album">
+        <div v-for="disc in discs" v-if="myGenre == disc.genre || myGenre == ''" class="album">
           <div class="image">
             <img :src="disc.poster" alt="">
           </div>
           <div class="title">
             {{disc.title}}
+          </div>
+          <div class="genre">
+            <i>{{disc.genre}}</i>
           </div>
           <div>
             <div class="author">

@@ -10,7 +10,9 @@ var app = new Vue(
   {
     el: "#container",
     data: {
-      discs: []
+      discs: [],
+      genres: [],
+      myGenre: ""
     },
 
     mounted: function(){
@@ -19,13 +21,19 @@ var app = new Vue(
         .get('https://flynn.boolean.careers/exercises/api/array/music')
         .then(function(result) {
           self.discs = result.data.response;
-          console.log(self.discs);
+          for(var i = 0; i < self.discs.length; i++){
+            if(self.genres.includes(result.data.response[i].genre) == false){
+              self.genres.push(result.data.response[i].genre);
+            }
+
+          }
+          console.log(self.genres);
         }
       );
     },
 
     methods: {
-
+    
     }
   }
 );
