@@ -35,7 +35,7 @@ main{
   margin: 10px;
   height: 45vh;
   width: calc(100% / 6 - 20px);
-  background: grey;
+  background: #2A2A2A;
   padding: 20px;
   border-radius: 5px;
   display: flex;
