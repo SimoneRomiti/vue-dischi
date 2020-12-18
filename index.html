@@ -18,7 +18,7 @@
         <label for="select">SELEZIONA GENERE</label>
         <select class="" name="" v-model="myGenre">
           <option value="">ALL</option>
-          <option v-for="genre in genres">{{genre}}</option>
+          <option v-for="genre in genres" :value="genre">{{genre}}</option>
         </select>
       </div>
 
